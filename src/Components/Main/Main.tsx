@@ -4,6 +4,7 @@ import {Fragment} from "react";
 import { Mocks } from "../../Mocks";
 import { IItemsTaskNames } from "../../Entidades/IItemsTaskNames";
 import List from "../List/List";
+import styles from "./Main.module.scss";
 export interface MainProps {
 	
 }
@@ -32,6 +33,7 @@ class Main extends React.Component<MainProps, MainState> {
 		return (
 			<Fragment>
 				<List itemsCards={this.state.itemsCards}/>
+				
 			</Fragment>
 		);
 	}
