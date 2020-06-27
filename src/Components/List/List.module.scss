@@ -1,0 +1,8 @@
+$color:red;
+.Container{
+	display: block;
+	 &_Text{
+		 color:$color;
+		 font-size: 20px;
+	 }
+}
