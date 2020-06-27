@@ -1,3 +1,5 @@
+@import "../../scss/Index.module.scss";
+
 $color:red;
 .Container{
 	display: block;
@@ -5,4 +7,29 @@ $color:red;
 		 color:$color;
 		 font-size: 20px;
 	 }
+}
+
+.Mock{
+	background-color: red;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px;
+	@include media-queries(extra-small) {
+    background-color:yellow;
+    }
+    @include media-queries(small) {
+    background-color:green;
+    }
+    @include media-queries(medium) {
+    background-color:purple;
+    }
+    @include media-queries(large) {
+    background-color:cyan;
+    }
+	@include media-queries(extra-large) {
+    background-color:blue;
+    }
+}
+h1{
+	// font-family:$font-family;
 }

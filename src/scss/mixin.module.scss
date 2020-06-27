@@ -1,54 +1,12 @@
-@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
-// Container con anchos maximos similares a bootstrap
-
-@mixin Container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include ms-screen-lg-up {
-    max-width: 640px;
+@mixin media-queries($break-point-size) {
+    @if map-has-key($breakpoints, $break-point-size) {
+      @media screen and ( min-width: map-get($breakpoints, $break-point-size) ) {
+        @content;
+      }
+    } @else {
+      @media screen and ( min-width: $break-point-size ) {
+        @content;
+      }
+    }
   }
-
-  @include ms-screen-xl-up {
-    max-width: 1024px;
-  }
-
-  @include ms-screen-xxl-up {
-    max-width: 1350px;
-  }
-
-  @include ms-screen-xxxl-up {
-    max-width: 1500px;
-  }
-
-}
-
-@mixin Card {
-  box-shadow: 0 0 34px rgba(0, 0, 0, .175);
-  background-color: $ms-color-white;
-  border-radius: 10px;
-}
-
-@mixin Input {
-  text-align: left;
-
-  :global(.ms-Label) {
-    font-family: 'DIN', Arial, sans-serif;
-    text-transform: uppercase;
-    color: $ms-color-neutralTertiary;
-    margin: 15px 0 0;
-  }
-}
-
-@mixin Checkbox {
-  text-align: left;
-
-  :global(.ms-Checkbox-text) {
-    font-family: 'DIN', Arial, sans-serif;
-  }
-}
-
- 

@@ -22,9 +22,12 @@ class List extends React.Component<ListProps, ListState> {
 						{this.props.itemsCards.map((item, i)=>
 							<div className={styles.Container} key={i}>
 								<span className={styles.Container_Text}>{item.nameTask}</span>
+								<span>{item.saludarMetodo()}</span>
 							</div>
-								
 						)}
+						<div style={{margin:"0 auto",width:"100%"}}>
+							<h1 className={styles.Mock}>PRUEBA DE MEDIAS</h1>
+						</div>
 			</Fragment>
 		);
 	}
