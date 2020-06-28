@@ -34,13 +34,23 @@ class Main extends React.Component<MainProps, MainState> {
 			<Fragment>
 				{/* <List itemsCards={this.state.itemsCards}/> */}
 				<div className={styles.Container}>
-					<div className={styles.Container_Header}><h1>ITEM</h1></div>
-					<div className={styles.Container_Enter}><h1>ENTERPRICE</h1></div>
-					<div className={styles.Container_Enter_Image}><h1>IMAGE</h1></div>
-					{/* <div><h1>ITEM</h1></div>
-					<div><h1>ITEM</h1></div>
-					<div><h1>ITEM</h1></div>
-					<div><h1>ITEM</h1></div> */}
+					<div className={styles.Container_Content}>
+						<header className={styles.Container_Content_Header}><h1>HEADER</h1></header>
+						<section className={styles.Container_Content_Enter}><h1>ENTERPRICE</h1></section>
+						<section className={styles.Container_Content_Enter_Image}><h1>ENTERPRICE IMAGE</h1></section>
+						<section className={styles.Container_Content_Whole}><h1>WHOLE</h1></section>
+						<section className={styles.Container_Content_Whole_Image}><h1>WHOLE IMG</h1></section>
+						<section className={styles.Container_Content_Portfolio}><h1>PORT </h1></section>
+						<section className={styles.Container_Content_Portfolio_Image}><h1>PORT IMG</h1></section>
+						<section className={styles.Container_Content_Granular}><h1>GRANULAR</h1></section>
+						<section className={styles.Container_Content_Granular_Image}><h1>GRANULAR IMG</h1></section>
+						<section className={styles.Container_Content_Plan}><h1>PLAN</h1></section>
+						<section className={styles.Container_Content_Plan_Image}><h1>PLAN IMG</h1></section>
+						<section className={styles.Container_Content_Live}><h1>LIVE</h1></section>
+						<section className={styles.Container_Content_Get}><h1>GET</h1></section>
+						<section className={styles.Container_Content_Card}><h1>CARD</h1></section>
+						<footer className={styles.Container_Content_Newsletter}><h1>NEWSLETTER</h1></footer>
+					</div>
 				</div>
 
 			</Fragment>

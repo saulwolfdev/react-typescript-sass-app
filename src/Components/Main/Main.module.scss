@@ -1,168 +1,173 @@
 @import "../../scss/Index.module.scss";
-.Container {
-	display: grid;
-	justify-items: stretch;
-	align-items: stretch;
-	grid-template-areas:
-		"Header"
-		"Enter"
-		"Enter_Image"
-		"Whole"
-		"Whole_Image"
-		"Portofolio"
-		"Portofolio_Image"
-		"Enter"
-		"Enter_Image"
-		"Granular"
-		"Granular_Image"
-		"Plan"
-		"Plan_Image"
-		"Live"
-		"Get"
-		"Card"
-		"Newsletter";
 
-	@include media-queries(extra-small) {
+.Container {
+	max-width: $max-width;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	flex-wrap: wrap;
+
+	&_Content {
+		width: 100%;
+		display: grid;
+		justify-items: stretch;
+		align-items: stretch;
 		grid-template-areas:
 			"Header"
 			"Enter"
-			"Enter_Image"
+			"EnterImage"
 			"Whole"
-			"Whole_Image"
-			"Portofolio"
-			"Portofolio_Image"
-			"Enter"
-			"Enter_Image"
+			"WholeImage"
+			"Portfolio"
+			"PortfolioImage"
 			"Granular"
-			"Granular_Image"
+			"GranularImage"
 			"Plan"
-			"Plan_Image"
+			"PlanImage"
 			"Live"
 			"Get"
 			"Card"
 			"Newsletter";
-	}
 
-	@include media-queries(small) {
-		grid-template-areas:
-			"Header Header"
-			"Enter Enter_Image"
-			"Whole Whole_Image"
-			"Portofolio Portofolio_Image"
-			"Granular Granular_Image"
-			"Plan Plan_Image"
-			"Live Live"
-			"Get Get"
-			"Card Card"
-			"Newsletter Newsletter";
-	}
+		@include media-queries(extra-small) {
+			grid-template-areas:
+				"Header"
+				"Enter"
+				"EnterImage"
+				"Whole"
+				"WholeImage"
+				"Portfolio"
+				"PortfolioImage"
+				"Granular"
+				"GranularImage"
+				"Plan"
+				"PlanImage"
+				"Live"
+				"Get"
+				"Card"
+				"Newsletter";
+		}
 
-	// @include media-queries(medium) {
-	// background-color:purple;
-	// }
-	// @include media-queries(large) {
-	// background-color:cyan;
-	// }
-	// @include media-queries(extra-large) {
-	// background-color:blue;
-	// }
+		@include media-queries(small) {
+			grid-template-areas:
+				"Header Header"
+				"Enter EnterImage"
+				"Whole WholeImage"
+				"Portfolio PortfolioImage"
+				"Granular GranularImage"
+				"Plan PlanImage"
+				"Live Live"
+				"Get Get"
+				"Card Card"
+				"Newsletter Newsletter";
+		}
 
-	&_Header {
-		grid-area: Header;
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-	}
+		&_Header {
+			grid-area: Header;
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+		}
 
-	&_Enter {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Enter;
-	}
+		&_Enter {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Enter;
+		}
 
-	&_Enter_Image {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Enter_Image;
-	}
+		&_Enter_Image {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: EnterImage;
+		}
 
-	&_Whole {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Whole;
-	}
+		&_Whole {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Whole;
+		}
 
-	&_Whole_Image {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Whole_Image;
-	}
+		&_Whole_Image {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: WholeImage;
+		}
 
-	&_Portofolio {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Portofolio;
-	}
+		&_Portfolio {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Portfolio;
+		}
 
-	&_Portofolio_Image {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Portofolio_Image;
-	}
+		&_Portfolio_Image {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: PortfolioImage;
+		}
 
-	&_Granular {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Granular;
-	}
+		&_Granular {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Granular;
+		}
 
-	&_Granular_Image {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Granular_Image;
-	}
+		&_Granular_Image {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: GranularImage;
+		}
 
-	&_Plan {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Plan;
-	}
+		&_Plan {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Plan;
+		}
 
-	&_Plan_Image {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Plan_Image;
-	}
+		&_Plan_Image {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: PlanImage;
+		}
 
-	&_Live {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Live;
-	}
+		&_Live {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Live;
+		}
 
-	&_Card {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Card;
-	}
+		&_Get {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Get;
+		}
 
-	&_Newsletter {
-		width: 100%;
-		padding: 20px;
-		text-align: center;
-		grid-area: Newsletter;
+		&_Card {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Card;
+		}
+
+		&_Newsletter {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			grid-area: Newsletter;
+		}
 	}
 
 }
