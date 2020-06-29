@@ -8,7 +8,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	flex-wrap: wrap;
-
+	height: 100vh;
 	&_Content {
 		width: 100%;
 		display: grid;
@@ -40,32 +40,17 @@
 		}
 		&_Header {
 			grid-area: Header;
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 		}
 		&_Sections {
 			grid-area: Sections;
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 		}
 		&_GetMore {
 			grid-area: GetMore;
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 		}
 		&_Cards {
 			grid-area: Cards;
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 		}
 		&_Newsletter {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Newsletter;
 		}
 	}

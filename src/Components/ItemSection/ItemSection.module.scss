@@ -1,21 +1,11 @@
 @import "../../scss/Index.module.scss";
 
-.Container {
-	max-width: $max-width;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	display: flex;
-	margin-left: auto;
-	margin-right: auto;
-	flex-wrap: wrap;
-
-	&_Content {
+	.ItemSection {
 		width: 100%;
 		display: grid;
 		justify-items: stretch;
 		align-items: stretch;
 		grid-template-areas:
-			"Header"
 			"Enter"
 			"EnterImage"
 			"Whole"
@@ -26,14 +16,10 @@
 			"GranularImage"
 			"Plan"
 			"PlanImage"
-			"Live"
-			"Get"
-			"Card"
-			"Newsletter";
+			"Live";
 
 		@include media-queries(extra-small) {
 			grid-template-areas:
-				"Header"
 				"Enter"
 				"EnterImage"
 				"Whole"
@@ -44,130 +30,59 @@
 				"GranularImage"
 				"Plan"
 				"PlanImage"
-				"Live"
-				"Get"
-				"Card"
-				"Newsletter";
+				"Live";
 		}
 
 		@include media-queries(small) {
 			grid-template-areas:
-				"Header Header"
 				"Enter EnterImage"
 				"Whole WholeImage"
 				"Portfolio PortfolioImage"
 				"Granular GranularImage"
 				"Plan PlanImage"
-				"Live Live"
-				"Get Get"
-				"Card Card"
-				"Newsletter Newsletter";
+				"Live Live";
 		}
-
-		&_Header {
-			grid-area: Header;
-			width: 100%;
-			padding: 20px;
-			text-align: center;
-		}
-
 		&_Enter {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Enter;
 		}
 
 		&_Enter_Image {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: EnterImage;
 		}
 
 		&_Whole {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Whole;
 		}
 
 		&_Whole_Image {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: WholeImage;
 		}
 
 		&_Portfolio {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Portfolio;
 		}
 
 		&_Portfolio_Image {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: PortfolioImage;
 		}
 
 		&_Granular {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Granular;
 		}
 
 		&_Granular_Image {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: GranularImage;
 		}
 
 		&_Plan {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Plan;
 		}
 
 		&_Plan_Image {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: PlanImage;
 		}
 
 		&_Live {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
 			grid-area: Live;
 		}
-
-		&_Get {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
-			grid-area: Get;
-		}
-
-		&_Card {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
-			grid-area: Card;
-		}
-
-		&_Newsletter {
-			width: 100%;
-			padding: 20px;
-			text-align: center;
-			grid-area: Newsletter;
-		}
 	}
-
-}

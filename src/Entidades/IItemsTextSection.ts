@@ -1,5 +1,6 @@
 export interface IItemsTextSection {
 	id:string;
+	identify:string;
 	title:string;
 	img:string;
 	description:string;

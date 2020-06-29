@@ -39,8 +39,7 @@ class Main extends React.Component<MainProps, MainState> {
 							<h1>HEADER</h1>
 						</header>
 						<main className={styles.Main_Content_Sections}>
-							<h1>SECTION</h1>
-							{/* <SectionItems itemsSections={this.state.itemsSections}/> */}
+							<SectionItems itemsSections={this.state.itemsSections}/>
 						</main>
 						<section className={styles.Main_Content_GetMore}>
 								<h1>GET</h1>

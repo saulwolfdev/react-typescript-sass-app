@@ -12,17 +12,18 @@ class Mocks{
 }
 	public GetItemsTextSection(): IItemsTextSection[] {
 	return [
-		{ id: uuidv4(),title:"1",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-		{ id: uuidv4(),title:"2",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-		{ id: uuidv4(),title:"3",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-		{ id: uuidv4(),title:"4",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-		{ id: uuidv4(),title:"5",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-		{ id: uuidv4(),title:"6",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
-
-		
+		{ id: uuidv4(),title:"1",identify:"Enter",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"2",identify:"EnterImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"3",identify:"Whole",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"4",identify:"WholeImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"5",identify:"Portfolio",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"6",identify:"PortfolioImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"7",identify:"Granular",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"8",identify:"GranularImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"9",identify:"Plan",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"10",identify:"PlanImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"11",identify:"Live",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},		
 	];
 }
-
 }
-
 export default Mocks;
