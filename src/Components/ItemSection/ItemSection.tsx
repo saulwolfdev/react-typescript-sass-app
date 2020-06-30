@@ -46,9 +46,9 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 	render() {
 		const { title } = this.props.itemSection;
 		return (
-			<div className={this._getClassCss()}>
+			<section className={this._getClassCss()}>
 				<h1>{title}</h1>
-			</div>
+			</section>
 		);
 	}
 }

@@ -1,7 +1,8 @@
-import {IItemsTaskNames,IItemsTextSection} from "../Entidades";
+import {IItemsTaskNames,IItemsTextSection,IItemHeader} from "../Entidades";
+import logo from "../img/svg/logo.svg";
 import { v4 as uuidv4 } from 'uuid';
-
 class Mocks{
+
 	public GetItemsTaskNames(): IItemsTaskNames[] {
 	return [
 		{ id: uuidv4(), category: "Extendida", nameTask: "NUEVA TAREA ESTÁNDAR1", saludarMetodo(){return "hola"}},
@@ -10,6 +11,18 @@ class Mocks{
 
 	];
 }
+
+	public GetItemsHeader(): IItemHeader {
+		return { 
+			logoSvg:logo,
+			produkt:"poduckt",
+			pricing:"pricing",
+			compare:"compare",
+			solutions:"solutions",
+			help:"help",
+			};
+	}
+
 	public GetItemsTextSection(): IItemsTextSection[] {
 	return [
 		{ id: uuidv4(),title:"1",identify:"Enter",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},

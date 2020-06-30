@@ -4,14 +4,16 @@ import { Fragment } from "react";
 import { Mocks } from "../../Mocks";
 import styles from "./Main.module.scss";
 import SectionItems from "../Section/SectionItems";
-import {IItemsTextSection} from "../../Entidades";
+import {IItemsTextSection, IItemHeader} from "../../Entidades";
+import Header from "../Header/Header";
 
 export interface MainProps {
-
+     
 }
-
 export interface MainState {
 	itemsSections:Array<IItemsTextSection>;
+	itemHeader:IItemHeader;
+	 
 }
 
 class Main extends React.Component<MainProps, MainState> {
@@ -19,14 +21,25 @@ class Main extends React.Component<MainProps, MainState> {
 		super(props);
 		this.state = {
 			itemsSections: [],
+			itemHeader:{
+					logoSvg:"",
+					produkt:"",
+					pricing:"",
+					compare:"",
+					solutions:"",
+					help:"",
+				},
+		
 		};
 	}
 
 	public componentDidMount() {
 		const items = new Mocks();
 		let itemsSections=items.GetItemsTextSection();
+	    let itemHeader=items.GetItemsHeader();
 		this.setState({
 			itemsSections,
+			itemHeader,
 		});
 	}
 
@@ -36,7 +49,7 @@ class Main extends React.Component<MainProps, MainState> {
 				<div className={styles.Main}>
 					<div className={styles.Main_Content}>
 						<header className={styles.Main_Content_Header}>
-							<h1>HEADER</h1>
+							<Header itemHeader={this.state.itemHeader}/>
 						</header>
 						<main className={styles.Main_Content_Sections}>
 							<SectionItems itemsSections={this.state.itemsSections}/>
