@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { Mocks } from "../../Mocks";
 import styles from "./Main.module.scss";
 import SectionItems from "../Section/SectionItems";
-import {IItemsTextSection, IItemHeader} from "../../Entidades";
+import {IItemsTextSection, IItemHeader,} from "../../Entidades";
 import Header from "../Header/Header";
 
 export interface MainProps {
@@ -52,7 +52,9 @@ class Main extends React.Component<MainProps, MainState> {
 							<Header itemHeader={this.state.itemHeader}/>
 						</header>
 						<main className={styles.Main_Content_Sections}>
-							<SectionItems itemsSections={this.state.itemsSections}/>
+							<SectionItems 
+							itemsSections={this.state.itemsSections}
+							/>
 						</main>
 						<section className={styles.Main_Content_GetMore}>
 								<h1>GET</h1>

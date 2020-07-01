@@ -1,7 +1,7 @@
 import * as React from "react";
-import { IItemsTextSection } from "../../Entidades";
+import { IItemsTextSection} from "../../Entidades";
 import ItemSection from "../ItemSection/ItemSection";
-import styles from "./SectionsItems.module.scss";
+// import styles from "./SectionsItems.module.scss";
 export interface SectionItemsProps {
 	itemsSections:Array<IItemsTextSection>;
 }
@@ -18,8 +18,10 @@ class SectionItems extends React.Component<SectionItemsProps, SectionItemsState>
 
 	render() { 
 		return (
-			<div className={styles.SectionsItems}>
-					{this.props.itemsSections.map((item, i)=><ItemSection key={i} itemSection={item}/>)}
+			<div >
+					{this.props.itemsSections.map((item, i)=>
+						<ItemSection key={i} itemSection={item}/>
+						)}
 			</div>
 		);
 	}

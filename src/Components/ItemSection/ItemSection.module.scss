@@ -1,11 +1,26 @@
 @import "../../scss/Index.module.scss";
 
-	.ItemSection {
-		width: 100%;
-		display: grid;
-		justify-items: stretch;
-		align-items: stretch;
-		grid-template-columns: 1fr 1fr;
+.ItemSection {
+	width: 100%;
+	display: grid;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"Enter"
+		"EnterImage"
+		"Whole"
+		"WholeImage"
+		"Portfolio"
+		"PortfolioImage"
+		"Granular"
+		"GranularImage"
+		"Plan"
+		"PlanImage"
+		"Live";
+
+	@include media-queries(extra-small) {
+		grid-template-columns: 1fr;
 		grid-template-areas:
 			"Enter"
 			"EnterImage"
@@ -18,72 +33,95 @@
 			"Plan"
 			"PlanImage"
 			"Live";
+	}
 
-		@include media-queries(extra-small) {
-			grid-template-areas:
-				"Enter"
-				"EnterImage"
-				"Whole"
-				"WholeImage"
-				"Portfolio"
-				"PortfolioImage"
-				"Granular"
-				"GranularImage"
-				"Plan"
-				"PlanImage"
-				"Live";
-		}
+	@include media-queries(small) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"Enter EnterImage"
+			"WholeImage Whole"
+			"Portfolio PortfolioImage"
+			"Granular GranularImage"
+			"Plan PlanImage"
+			"Live Live";
+	}
 
-		@include media-queries(small) {
-			grid-template-areas:
-				"Enter EnterImage"
-				"Whole WholeImage"
-				"Portfolio PortfolioImage"
-				"Granular GranularImage"
-				"Plan PlanImage"
-				"Live Live";
-		}
-		&_Enter {
-			grid-area: Enter;
-		}
+	&_Enter {
+		grid-area: Enter;
+	}
 
-		&_Enter_Image {
-			grid-area: EnterImage;
-		}
+	&_Enter_Image {
+		grid-area: EnterImage;
 
-		&_Whole {
-			grid-area: Whole;
-		}
-
-		&_Whole_Image {
-			grid-area: WholeImage;
-		}
-
-		&_Portfolio {
-			grid-area: Portfolio;
-		}
-
-		&_Portfolio_Image {
-			grid-area: PortfolioImage;
-		}
-
-		&_Granular {
-			grid-area: Granular;
-		}
-
-		&_Granular_Image {
-			grid-area: GranularImage;
-		}
-
-		&_Plan {
-			grid-area: Plan;
-		}
-
-		&_Plan_Image {
-			grid-area: PlanImage;
-		}
-
-		&_Live {
-			grid-area: Live;
+		&_Img {
+			width: 100%;
+			display: block;
 		}
 	}
+
+	&_Whole {
+		grid-area: Whole;
+	}
+
+	&_Whole_Image {
+		grid-area: WholeImage;
+
+		&_Img {
+			width: 100%;
+			display: block;
+		}
+
+
+	}
+
+	&_Portfolio {
+		grid-area: Portfolio;
+	}
+
+	&_Portfolio_Image {
+		grid-area: PortfolioImage;
+
+		&_Img {
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+	&_Granular {
+		grid-area: Granular;
+	}
+
+	&_Granular_Image {
+		grid-area: GranularImage;
+
+		&_Img {
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+	&_Plan {
+		grid-area: Plan;
+	}
+
+	&_Plan_Image {
+		grid-area: PlanImage;
+
+		&_Img {
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+	&_Live {
+		grid-area: Live;
+
+		&_Img {
+			width: 100%;
+			display: block;
+		}
+	}
+}

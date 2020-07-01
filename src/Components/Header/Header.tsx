@@ -18,7 +18,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 			<nav className={styles.Header}>
 				<ul  className={styles.Header_List}>
 					
-						<a className={styles.Header_List_Logo} href="https://www.produck.io/" target="_blank"><img src={logoSvg} alt="logo"/></a>
+						<a className={styles.Header_List_Logo} href="https://www.produck.io/" target={"_blank"}><img src={logoSvg} alt="logo"/></a>
 				
 					<li className={styles.Header_List_Princing}>{pricing}</li>
 					<li className={styles.Header_List_Produkt}>{produkt}</li>
