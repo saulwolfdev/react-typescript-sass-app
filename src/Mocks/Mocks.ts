@@ -15,7 +15,7 @@ class Mocks{
 	public GetItemsHeader(): IItemHeader {
 		return { 
 			logoSvg:logo,
-			produkt:"Poduckt",
+			produkt:"Product",
 			pricing:"Pricing",
 			compare:"Compare",
 			solutions:"Solutions",
@@ -25,7 +25,7 @@ class Mocks{
 
 	public GetItemsTextSection(): IItemsTextSection[] {
 	return [
-		{ id: uuidv4(),title:"1",identify:"Enter",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
+		{ id: uuidv4(),title:"The Enterprise solution for efficient teams",identify:"Enter",description:"Produck allows you to build at scale, bringing your whole organization to a single place to collaborate, innovate, and move work forward.",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
 		{ id: uuidv4(),title:"2",identify:"EnterImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
 		{ id: uuidv4(),title:"3",identify:"Whole",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},
 		{ id: uuidv4(),title:"4",identify:"WholeImage",description:"",img:"",iconSvg:["",""],iconDescription:"",textTip:""},

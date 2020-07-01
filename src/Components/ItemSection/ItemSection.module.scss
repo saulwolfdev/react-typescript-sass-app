@@ -5,6 +5,7 @@
 		display: grid;
 		justify-items: stretch;
 		align-items: stretch;
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
 			"Enter"
 			"EnterImage"

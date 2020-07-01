@@ -16,13 +16,31 @@ body {
 body {
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-// $font-family:"Lato", sans-serif;
-  $breakpoints:(
+
+$max-width:1200px;
+$lato-sans: 'Lato', sans-serif;
+:root {
+    --main-font: 'Lato', sans-serif;
+    --alternate-font: sans-serif;
+    --font-size: 15px;
+    --font-weight-300:100;
+    --font-weight-400:400; 
+    --font-weight-500:500; 
+    --font-weight-700:700;  
+    --line-height: auto;
+    --main-color: #FFF;
+
+    --z-back:-10;
+    --z-standar:1;
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+  }
+
+  $breakpoints: (
     extra-small: 30em, /* 480 / 16  */
     small: 37.5em, /* 600 / 16  */
     medium: 45em, /* 720 / 16 */
     large: 64em, /* 1024 / 16 */
     extra-large: 75em /* 1200/ 16 */
   );
-
-  $max-width:1200px;
