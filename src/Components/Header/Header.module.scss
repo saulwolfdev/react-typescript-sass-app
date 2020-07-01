@@ -1,0 +1,85 @@
+@import "../../scss/Index.module.scss";
+
+.Header {
+	width: 100%;
+	display: grid;
+	grid-template-areas: "Menu Login";
+	padding: 25px 0;
+	&_List {
+		grid-area: Menu;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&_Logo {
+			list-style: none;
+		}
+
+		&_Princing {
+			font-size: 16px;
+			font-weight: 600;
+			list-style: none;
+		}
+
+		&_Produkt {
+			font-size: 16px;
+			list-style: none;
+		}
+
+		&_Compare {
+			font-size: 16px;
+			display: flex;
+			align-items: center;
+			align-content: center;
+
+			&::after {
+				display: block;
+				content: ' ';
+				background-image: url('../../img/svg/arrowDown.svg');
+				background-size: 14px 14px;
+				height: 14px;
+				width: 14px;
+				margin-left: 10px;
+				margin-top: 4px;
+			}
+		}
+
+		&_Solutions {
+			@extend .Header_List_Compare;
+
+			&::after {
+				@extend .Header_List_Compare::after;
+			}
+		}
+
+		&_Help {
+			font-size: 16px;
+			list-style: none;
+		}
+
+	}
+
+	&_Login {
+		grid-area: Login;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		&_In {
+			padding: 17px 20px;
+			font-size: 15px;
+		}
+
+		&_Get {
+			background-color: #2693ff;
+			padding: 17px 20px;
+			font-size: 15px;
+			outline: none;
+			border: none;
+			border-radius: 4px;
+			font-weight: 700;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}

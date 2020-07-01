@@ -15,11 +15,11 @@ class Mocks{
 	public GetItemsHeader(): IItemHeader {
 		return { 
 			logoSvg:logo,
-			produkt:"poduckt",
-			pricing:"pricing",
-			compare:"compare",
-			solutions:"solutions",
-			help:"help",
+			produkt:"Poduckt",
+			pricing:"Pricing",
+			compare:"Compare",
+			solutions:"Solutions",
+			help:"Help",
 			};
 	}
 
