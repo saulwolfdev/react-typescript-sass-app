@@ -17,7 +17,8 @@
 		"GranularImage"
 		"Plan"
 		"PlanImage"
-		"Live";
+		"Live"
+		"LiveImage";
 
 	@include media-queries(extra-small) {
 		grid-template-columns: 1fr;
@@ -32,7 +33,8 @@
 			"GranularImage"
 			"Plan"
 			"PlanImage"
-			"Live";
+			"Live"
+			"LiveImage";
 	}
 
 	@include media-queries(small) {
@@ -41,9 +43,10 @@
 			"Enter EnterImage"
 			"WholeImage Whole"
 			"Portfolio PortfolioImage"
-			"Granular GranularImage"
+			"GranularImage Granular"
 			"Plan PlanImage"
-			"Live Live";
+			"Live Live"
+			"LiveImage LiveImage";
 	}
 
 	&_Enter {
@@ -52,25 +55,12 @@
 
 	&_Enter_Image {
 		grid-area: EnterImage;
-
-		&_Img {
-			width: 100%;
-			display: block;
-		}
 	}
-
 	&_Whole {
 		grid-area: Whole;
 	}
-
 	&_Whole_Image {
 		grid-area: WholeImage;
-
-		&_Img {
-			width: 100%;
-			display: block;
-		}
-
 
 	}
 
@@ -81,10 +71,6 @@
 	&_Portfolio_Image {
 		grid-area: PortfolioImage;
 
-		&_Img {
-			width: 100%;
-			display: block;
-		}
 
 	}
 
@@ -95,10 +81,6 @@
 	&_Granular_Image {
 		grid-area: GranularImage;
 
-		&_Img {
-			width: 100%;
-			display: block;
-		}
 
 	}
 
@@ -109,19 +91,14 @@
 	&_Plan_Image {
 		grid-area: PlanImage;
 
-		&_Img {
-			width: 100%;
-			display: block;
-		}
 
 	}
-
 	&_Live {
 		grid-area: Live;
 
-		&_Img {
-			width: 100%;
-			display: block;
-		}
+	}
+	&_Live_Image {
+		grid-area: LiveImage;
+
 	}
 }

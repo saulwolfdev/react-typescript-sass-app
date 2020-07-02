@@ -20,7 +20,7 @@ class SectionItems extends React.Component<SectionItemsProps, SectionItemsState>
 		return (
 			<div >
 					{this.props.itemsSections.map((item, i)=>
-						<ItemSection key={i} itemSection={item}/>
+						<ItemSection key={i} itemSection={item} showElementItem={true}/>
 						)}
 			</div>
 		);
