@@ -1,9 +1,10 @@
 
 import * as React from "react";
+import { IItemsTextSection } from "../../Entidades";
 
 export interface FormFirsItemProps {
-itemText: string;
-itemDescription: string;
+	// addText:IItemsTextSection;
+	
 }
 
 const FormFirsItem: React.SFC<FormFirsItemProps> = () => {

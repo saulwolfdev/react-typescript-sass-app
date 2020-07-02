@@ -3,10 +3,13 @@ import { IItemsTextSection } from "../../Entidades";
 import ShowElement from "../ShowElement/ShowElement";
 import styles from "./ItemSection.module.scss";
 import FormFirsItem from "../FormFirstItem/FormFirsItem";
+import ItemSectionIcons from "../ItemSectionIcons/ItemSectionIcons";
 
 export interface ItemSectionProps {
 	itemSection: IItemsTextSection;
-	showElementItem:boolean;
+	showElementForm: boolean;
+	// showElementArray: boolean;
+	// showElementText: boolean;
 }
 
 export interface ItemSectionState {
@@ -59,36 +62,47 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 		}
 	}
 	public render() {
-		const { title, description, img, addText, textTip,identify } = this.props.itemSection;
+		const { title, description, img,icons} = this.props.itemSection;
+		console.log("XXXXXXXXXXXXXXXXXXXXX",icons)
 		const { textStyle, imageStyle } = this._getClassCss();
-		let showButtonItem=(this.props.itemSection.identify==="Enter")?
-		<button>product <samp>for Enterprise</samp></button>:null;
-		let formFirstItem=(this.props.itemSection.identify==="Enter")?
-		<div>
-		<form action="">
+		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button>product <samp>for Enterprise</samp></button> : null;
+		let showElemenForm = (this.props.itemSection.identify == "Enter") ?
+			<div>
+				<form action="">
 					<input type="text" />
 					<input type="button" value="" />
 				</form>
 
 				<small></small>
-		<span></span>
-		</div>
-		:null;
+				<span></span>
+			</div>
+			: null;
 		return (
 			<div className={styles.ItemSection}>
 				<section className={textStyle}>
 					{showButtonItem}
 					<h1>{title}</h1>
 					<p>{description}</p>
-					<ShowElement show={this.props.showElementItem}>
-						{formFirstItem}
+					<ShowElement show={this.props.showElementForm}>
+						{showElemenForm}
 					</ShowElement>
-					<ul>
-						<li>
-							<img src="" alt="" />
-							<span></span>
-						</li>
-					</ul>
+
+					{/* <ShowElement show={this.props.showElementArray}>
+
+					</ShowElement>
+					<ShowElement show={this.props.showElementText}>
+
+					</ShowElement> */}
+					{/* <ul>
+						{this.props.itemSection.map((item, i) => {
+							return 		<li key={i}>
+								<img src={item.iconUrl} alt="" />
+								<span>{item.description}</span>
+							</li>
+						})}
+
+					</ul> */}
+					<ItemSectionIcons itemIcons={this.props.itemSection}/>
 
 				</section>
 				<section className={imageStyle} >

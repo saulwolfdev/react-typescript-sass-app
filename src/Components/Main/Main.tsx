@@ -12,6 +12,7 @@ export interface MainProps {
 }
 export interface MainState {
 	itemsSections:Array<IItemsTextSection>;
+	// itemsIcons:Array<IItemsTextSection>;
 	itemHeader:IItemHeader;
 	 
 }
@@ -21,6 +22,7 @@ class Main extends React.Component<MainProps, MainState> {
 		super(props);
 		this.state = {
 			itemsSections: [],
+			// itemsIcons:
 			itemHeader:{
 					logoSvg:"",
 					produkt:"",
