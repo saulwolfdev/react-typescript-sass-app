@@ -12,7 +12,7 @@ const ImageNewsletter: React.SFC<ImageNewsletterProps> = () => {
 			<h3>Try Produck for free</h3>
 			<p>Make your team more successful with Produck.</p>
 			<button>Get Started Free</button>
-			<img src="https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc8abc1ea28d804149a41c5_videotriangle.svg" alt="icon arrow" />
+			<img src="https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc8abc1ea28d804149a41c5_videotriangle.svg" alt="icon arrow"/>
 			<span>Watch demo</span>
 		</div>
 

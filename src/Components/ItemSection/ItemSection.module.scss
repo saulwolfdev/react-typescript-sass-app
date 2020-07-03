@@ -17,8 +17,8 @@
 		"GranularImage"
 		"Plan"
 		"PlanImage"
-	"Live"
-			"LiveImage";
+		"Live"
+		"LiveImage";
 
 	@include media-queries(extra-small) {
 		grid-template-columns: 1fr;
@@ -49,6 +49,37 @@
 			"LiveImage LiveImage";
 	}
 
+
+	&_Button{
+		background-color:#f0f2f4;
+		font-size: $font-medium;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px 14px;
+		outline: none;
+		border: none;
+			&_Text{
+				font-size: $font-medium;
+				font-weight: var(--font-weight-600);
+				margin-left: 5px;
+			}
+			&::after {
+				display: block;
+				content: ' ';
+				background-image: url('../../img/svg/arrowDown.svg');
+				background-size: 14px 14px;
+				height: 14px;
+				width: 14px;
+				margin-left: 10px;
+				margin-top: 4px;
+			}	
+	}
+
+
+
+
+/////////////////////////////////////////
 	&_Enter {
 		grid-area: Enter;
 	}
@@ -56,9 +87,11 @@
 	&_Enter_Image {
 		grid-area: EnterImage;
 	}
+
 	&_Whole {
 		grid-area: Whole;
 	}
+
 	&_Whole_Image {
 		grid-area: WholeImage;
 
@@ -93,10 +126,12 @@
 
 
 	}
+
 	&_Live {
 		grid-area: Live;
 
 	}
+
 	&_Live_Image {
 		grid-area: LiveImage;
 

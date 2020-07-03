@@ -21,7 +21,7 @@ class IconsSections extends React.Component<IconsSectionsProps, IconsSectionsSta
 				{icons?.map((item, i) => {
 					return (
 					<li key={i}>
-						<img src={item.iconUrl} alt="icon" />
+						<img src={item.iconUrl} alt="icon" width="24"/>
 						<p>{item.description}</p>
 					</li>)
 				})}

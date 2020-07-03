@@ -1,46 +1,85 @@
 *,
 *:after,
 *:before {
-      box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 html,
 body {
-    height: 100%!important;
-    min-height: 100%!important;
-    box-sizing: border-box!important;
+	height: 100% !important;
+	min-height: 100% !important;
+	box-sizing: border-box !important;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 body {
-    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 $max-width:1200px;
-$lato-sans: 'Lato', sans-serif;
+$lato-sans: 'Lato',
+sans-serif;
+
 :root {
-    --main-font: 'Lato', sans-serif;
-    --alternate-font: sans-serif;
-    --font-size: 15px;
-    --font-weight-300:100;
-    --font-weight-400:400; 
-    --font-weight-500:500; 
-    --font-weight-700:700;  
-    --line-height: auto;
-    --main-color: #FFF;
+	--main-font: 'Lato', sans-serif;
+	
+	--font-weight-300: 100;
+	--font-weight-400: 400;
+	--font-weight-500: 500;
+	--font-weight-600: 600;
+	--font-weight-700: 700;
+	--font-weight-900: 900;
 
-    --z-back:-10;
-    --z-standar:1;
-    --z-tooltip:10;
-    --z-fixed:100;
-    --z-modal:1000;
-  }
+	--line-height-32:32px;
+	--line-height-36:36px;
+	--line-height-68:68px;
 
-  $breakpoints: (
-    extra-small: 30em, /* 480 / 16  */
-    small: 37.5em, /* 600 / 16  */
-    medium: 45em, /* 720 / 16 */
-    large: 64em, /* 1024 / 16 */
-    extra-large: 75em /* 1200/ 16 */
-  );
+	--main-color: #FFF;
+
+	--z-back: -10;
+	--z-standar: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+
+$color-one:#2693ff;
+$color-two:#1ec72c;
+$color-three:#a444d1;
+$color-four: #676d7d;
+$color-five:#f9f9fb;
+//redes
+$color-six:#2693ff;
+$color-seven:#e8403f;
+$color-eight:#f00073;
+$color-nine:#1b95e0;
+$color-ten:#3bcebd;
+
+$font-title:48px;
+$font-subtitle:18px;
+$font-paragraph:16px;
+$font-medium:15px;
+$font-small:13px;
+
+
+$margin-bottom-description:48px;
+$margin-bottom-icon-list:24px;
+$box-shadow-pin:8px 8px 24px 0 rgba(0, 0, 0, .12);
+$box-shadow-input: 0 8px 16px 0 rgba(0, 0, 0, .12);
+$box-shadow-content: 16px 16px 36px 0 rgba(0, 0, 0, .12);
+
+$breakpoints: (
+	extra-small: 30em,
+	/* 480 / 16  */
+	small: 37.5em,
+	/* 600 / 16  */
+	medium: 45em,
+	/* 720 / 16 */
+	large: 64em,
+	/* 1024 / 16 */
+	extra-large: 75em
+	/* 1200/ 16 */
+);

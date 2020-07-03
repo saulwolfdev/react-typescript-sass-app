@@ -19,7 +19,7 @@ class GetItem extends React.Component<GetItemProps, GetItemState> {
 		return (
 			<div>
 				<div>
-				<img src={imgUrl} alt="img icon"/>
+				<img src={imgUrl} alt="img icon" width="144"/>
 				<h4>{title}</h4>
 				<p>{description}</p>
 			</div>

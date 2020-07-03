@@ -20,7 +20,7 @@ class ItemListIcon extends React.Component<ItemListIconProps, ItemListIconState>
 		return (
 		<Fragment>
 				<li>
-					<img src={iconUrl} alt={title}/>
+					<img src={iconUrl} alt={title} width="64"/>
 					<h4>{title}</h4>
 					<p>{description}</p>
 				</li>

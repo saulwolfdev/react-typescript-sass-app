@@ -57,11 +57,11 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 					imageStyle: "",
 				}
 		}
-	}
+	}			
 	public render() {
 		const { title, description, img, addText, textTip, propTip } = this.props.itemSection;
 		const { textStyle, imageStyle } = this._getClassCss();
-		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button>product <samp>for Enterprise</samp></button> : null;
+		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button className={styles.ItemSection_Button}>Produkt <span className={styles.ItemSection_Button_Text}> for Enterprise</span></button> : null;
 		let showText =(<span>{propTip}</span>);
 		let showElemenForm = (
 			<div>
