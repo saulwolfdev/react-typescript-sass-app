@@ -29,7 +29,12 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 					<span className={styles.Header_Login_In}>Sign in</span>
 				<button className={styles.Header_Login_Get}>Get Started Free</button>
 				</div>
-
+				<div className={styles.Header_Hamburger}>
+					<input type="checkbox"  className={styles.Header_Hamburger_Input}/>
+					<span className={styles.Header_Hamburger_Line}></span>
+					<span className={styles.Header_Hamburger_Line}></span>
+					<span className={styles.Header_Hamburger_Line}></span>
+				</div>
 			</nav>
 		);
 	}

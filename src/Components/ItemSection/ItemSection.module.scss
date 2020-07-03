@@ -22,7 +22,6 @@
 
 	@include media-queries(extra-small) {
 		grid-template-columns: 1fr;
-		// grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas:
 			"Enter"
 			"EnterImage"
@@ -40,17 +39,15 @@
 
 	@include media-queries(small) {
 		grid-template-columns: 1fr 1fr;
-		// grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-		// grid-row-gap: 20px;
-		// grid-column-gap: 20px;
+		grid-template-rows: 1fr;
 		grid-template-areas:
-			"Enter EnterImage"
-			"WholeImage Whole"
-			"Portfolio PortfolioImage"
-			"GranularImage Granular"
-			"Plan PlanImage"
-			"Live Live"
-			"LiveImage LiveImage";
+			"Enter          EnterImage"
+			"WholeImage     Whole"
+			"Portfolio      PortfolioImage"
+			"GranularImage  Granular"
+			"Plan           PlanImage"
+			"Live           Live"
+			"LiveImage      LiveImage";
 	}
 
 	&_Button {
@@ -62,6 +59,7 @@
 		padding: 12px 14px;
 		outline: none;
 		border: none;
+		margin-top: 80px;
 
 		&_Text {
 			font-size: $font-medium;
@@ -116,8 +114,8 @@
 		&_Text {
 			font-size: $font-small;
 			line-height: var(--line-height-32);
-			margin: 4px 0;
-			color:$color-four;
+			margin: 10px 0;
+			color: $color-four;
 		}
 
 		&_Add {
@@ -125,78 +123,186 @@
 			line-height: var(--line-height-32);
 			background-color: $color-three;
 			padding: 8px 12px;
-			color:#fff;
+			color: #fff;
+			border-radius: 4px;
 		}
 	}
-	&_Title{
+
+	&_Title {
 		font-size: $font-title;
 		line-height: var(--line-height-68);
 		font-weight: var(--font-weight-900);
 	}
-	&_Description{
+
+	&_Description {
 		font-size: $font-subtitle;
 		line-height: var(--line-height-36);
 		margin-bottom: $margin-bottom-description;
-		color:$color-four;
+		color: $color-four;
 	}
 
-
-	/////////////////////////////////////////
 	&_Enter {
 		grid-area: Enter;
-		padding-right: $padding-right;
+		height: auto;
+		padding-right: 0;
 
+		@include media-queries(extra-small) {
+			height: auto;
+			padding-right: 0;
+		}
+
+		@include media-queries(small) {
+			height: auto;
+			padding-right: 0;
+		}
+
+		@include media-queries(medium) {
+			height: 600px;
+			padding-right: $padding-right;
+		}
+
+		@include media-queries(large) {
+			height: 900px;
+			padding-right: $padding-right;
+		}
 	}
 
 	&_Enter_Image {
 		grid-area: EnterImage;
-		padding-right: $padding-left;
+		position: relative;
+		padding-right: 0;
+		display: none;
+
+		@include media-queries(extra-small) {
+			height: auto;
+			padding-right: 0;
+			display: none;
+		}
+
+		@include media-queries(small) {
+			height: auto;
+			padding-right: 0;
+			display: none;
+		}
+
+		@include media-queries(medium) {
+			height: 600px;
+			padding-right: 0;
+			display: none;
+		}
+
+		@include media-queries(large) {
+			display: block;
+			height: 900px;
+			padding-left: $padding-left;
+		}
+
+		&_Img {
+			position: relative;
+			z-index: var(--z-standar);
+			max-width: 133%;
+			right: 0;
+			max-width: 166%;
+			right: 0;
+			top: 56px;
+			right: 0;
+			margin-left: 52px;
+			display: none;
+
+			@include media-queries(extra-small) {
+				display: none;
+			}
+
+			@include media-queries(small) {
+				display: none;
+			}
+
+			@include media-queries(medium) {
+				display: block;
+			}
+		}
+
+		&_ImgBackground {
+			position: absolute;
+			z-index: var(--z-back);
+			max-width: 34%;
+			top: 0;
+			right: 0;
+			display: none;
+
+			@include media-queries(extra-small) {
+				display: none;
+			}
+
+			@include media-queries(small) {
+				display: none;
+			}
+
+			@include media-queries(medium) {
+				display: block;
+			}
+		}
 	}
 
 	&_Whole {
 		grid-area: Whole;
-		padding-right: $padding-left;
+		padding-left: 0;
+
+		@include media-queries(extra-small) {
+			padding-left: 0;
+		}
+
+		@include media-queries(small) {
+			padding-left: $padding-left;
+		}
 	}
 
 	&_Whole_Image {
 		grid-area: WholeImage;
+		padding-right: 0;
 
-		padding-right: $padding-left;
+		@include media-queries(extra-small) {
+			padding-right: 0;
+		}
 
-
+		@include media-queries(small) {
+			padding-right: $padding-right;
+		}
 	}
 
 	&_Portfolio {
+		@extend .ItemSection_Whole_Image;
 		grid-area: Portfolio;
 		padding-right: $padding-right;
+
 	}
 
 	&_Portfolio_Image {
+		@extend .ItemSection_Whole_Image;
 		grid-area: PortfolioImage;
 		padding-right: $padding-left;
-
-
 	}
 
 	&_Granular {
+		@extend .ItemSection_Whole_Image;
 		grid-area: Granular;
 		padding-right: $padding-left;
 	}
 
 	&_Granular_Image {
+		@extend .ItemSection_Whole_Image;
 		grid-area: GranularImage;
-		grid-area: Portfolio;
 		padding-right: $padding-right;
-
-
 	}
 
 	&_Plan {
+		@extend .ItemSection_Whole_Image;
 		grid-area: Plan;
 		padding-right: $padding-right;
 	}
 
 	&_Plan_Image {
+		@extend .ItemSection_Whole_Image;
 		grid-area: PlanImage;
 		padding-right: $padding-left;
 
@@ -205,6 +311,7 @@
 
 	&_Live {
 		grid-area: Live;
+		text-align: center;
 
 	}
 

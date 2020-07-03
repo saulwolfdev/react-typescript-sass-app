@@ -5,6 +5,8 @@
 	display: grid;
 	grid-template-areas: "Menu Login";
 	padding: 25px 0;
+	position: relative;
+
 	&_List {
 		grid-area: Menu;
 		display: flex;
@@ -20,16 +22,24 @@
 			font-size: 16px;
 			font-weight: 600;
 			list-style: none;
+			display: none;
+
+			@include media-queries(extra-small) {
+				display: none;
+			}
+
+			@include media-queries(small) {
+				display: block;
+			}
 		}
 
 		&_Produkt {
-			font-size: 16px;
-			list-style: none;
+			@extend .Header_List_Princing;
 		}
 
 		&_Compare {
 			font-size: 16px;
-			display: flex;
+			// display: flex;
 			align-items: center;
 			align-content: center;
 
@@ -44,6 +54,15 @@
 				margin-top: 4px;
 			}
 
+			display: none;
+
+			@include media-queries(extra-small) {
+				display: none;
+			}
+
+			@include media-queries(small) {
+				display: flex;
+			}
 		}
 
 		&_Solutions {
@@ -55,14 +74,14 @@
 		}
 
 		&_Help {
-			font-size: 16px;
-			list-style: none;
+			@extend .Header_List_Princing;
 		}
 
 	}
+
 	&_Login {
 		grid-area: Login;
-		display: flex;
+		// display: flex;
 		justify-content: flex-end;
 		align-items: center;
 
@@ -82,7 +101,57 @@
 			color: #fff;
 			cursor: pointer;
 		}
+
+		display: none;
+
+		@include media-queries(extra-small) {
+			display: none;
+		}
+
+		@include media-queries(small) {
+			display: flex;
+		}
 	}
 
-}
+	&_Hamburger {
+		display: block;
+		position: absolute;
+		top: 33px;
+		right: 20px;
 
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+
+		&_Input {
+			display: block;
+			width: 40px;
+			height: 32px;
+			position: absolute;
+			top: -7px;
+			left: -5px;
+			cursor: pointer;
+			opacity: 0;
+			z-index: 2;
+			-webkit-touch-callout: none;
+		}
+
+		&_Line {
+			display: block;
+			width: 33px;
+			height: 4px;
+			margin-bottom: 5px;
+			position: relative;
+			background: #cdcdcd;
+			border-radius: 3px;
+		}
+
+		@include media-queries(extra-small) {
+			display: block;
+		}
+
+		@include media-queries(small) {
+			display: none;
+		}
+	}
+}

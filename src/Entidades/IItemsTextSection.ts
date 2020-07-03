@@ -8,6 +8,7 @@ export interface IItemsTextSection {
 	identify?:string;
 	title?:string;
 	img?:string;
+	imgBackground?:string;
 	description?:string;
 	addText?:string;
 	textTip?:string;

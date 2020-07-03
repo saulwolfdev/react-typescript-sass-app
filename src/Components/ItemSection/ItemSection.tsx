@@ -57,19 +57,19 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 					imageStyle: "",
 				}
 		}
-	}			
+	}
 	public render() {
-		const { title, description, img, addText, textTip, propTip } = this.props.itemSection;
+		const { title, description, img, addText, textTip, propTip, imgBackground } = this.props.itemSection;
 		const { textStyle, imageStyle } = this._getClassCss();
 		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button className={styles.ItemSection_Button}>Produkt <span className={styles.ItemSection_Button_Text}> for Enterprise</span></button> : null;
-		let showText =(<span>{propTip}</span>);
+		let showText = (<span>{propTip}</span>);
 		let showElemenForm = (
 			<div className={styles.ItemSection_Form}>
 				<form className={styles.ItemSection_Form_Container}>
-					<input className={styles.ItemSection_Form_Container_Input} type="text" placeholder="Your work email..."/>
-					<input  className={styles.ItemSection_Form_Container_Button} type="button" value="Get Started Free" />
+					<input className={styles.ItemSection_Form_Container_Input} type="text" placeholder="Your work email..." />
+					<input className={styles.ItemSection_Form_Container_Button} type="button" value="Get Started Free" />
 				</form>
-				<p  className={styles.ItemSection_Form_Text}>{addText}</p>
+				<p className={styles.ItemSection_Form_Text}>{addText}</p>
 				<span className={styles.ItemSection_Form_Add}>{textTip}</span>
 			</div>
 		);
@@ -96,9 +96,21 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 						{showText}
 					</ShowElement>
 				</section>
-
+                   <ShowElement show={this.props.itemSection.identify === "Enter"}>
+						<img className={styles.ItemSection_Enter_Image_ImgBackground} src={imgBackground}  alt={title} />
+					</ShowElement>
 				<section className={imageStyle}>
-					<img src={img} style={{ width: "100%", display: "block" }} alt="alt" />
+					<ShowElement show={
+						this.props.itemSection.identify === "Whole"
+						|| this.props.itemSection.identify === "Portfolio"
+						|| this.props.itemSection.identify === "Granullar"
+						|| this.props.itemSection.identify === "Plan"}>
+						<img src={img} style={{ width: "100%", display: "block" }} alt={title} />
+					</ShowElement>
+					<ShowElement show={this.props.itemSection.identify === "Enter"}>
+						<img src={img} className={styles.ItemSection_Enter_Image_Img} alt={title} />
+					</ShowElement>
+					<ItemSectionIcons itemIcons={this.props.itemSection} />
 					<ShowElement show={this.props.itemSection.identify === "Live"}>
 						{showText}
 						<ItemSectionIcons itemIcons={this.props.itemSection} />
