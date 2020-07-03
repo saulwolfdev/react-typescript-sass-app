@@ -17,8 +17,8 @@
 		"GranularImage"
 		"Plan"
 		"PlanImage"
-		"Live"
-		"LiveImage";
+	"Live"
+			"LiveImage";
 
 	@include media-queries(extra-small) {
 		grid-template-columns: 1fr;

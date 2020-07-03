@@ -2,14 +2,11 @@ import * as React from "react";
 import { IItemsTextSection } from "../../Entidades";
 import ShowElement from "../ShowElement/ShowElement";
 import styles from "./ItemSection.module.scss";
-import FormFirsItem from "../FormFirstItem/FormFirsItem";
 import ItemSectionIcons from "../ItemSectionIcons/ItemSectionIcons";
 
 export interface ItemSectionProps {
 	itemSection: IItemsTextSection;
 	showElementForm: boolean;
-	// showElementArray: boolean;
-	// showElementText: boolean;
 }
 
 export interface ItemSectionState {
@@ -62,51 +59,50 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 		}
 	}
 	public render() {
-		const { title, description, img,icons} = this.props.itemSection;
-		console.log("XXXXXXXXXXXXXXXXXXXXX",icons)
+		const { title, description, img, addText, textTip, propTip } = this.props.itemSection;
 		const { textStyle, imageStyle } = this._getClassCss();
 		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button>product <samp>for Enterprise</samp></button> : null;
-		let showElemenForm = (this.props.itemSection.identify == "Enter") ?
+		let showText = (this.props.itemSection.identify === "Plan") ? <span>{propTip}</span> : null;
+		let showElemenForm = (
 			<div>
 				<form action="">
 					<input type="text" />
-					<input type="button" value="" />
+					<input type="button" value="enviar" />
 				</form>
 
-				<small></small>
-				<span></span>
+				<small>{addText}</small>
+				<span>{textTip}</span>
 			</div>
-			: null;
+		);
 		return (
 			<div className={styles.ItemSection}>
 				<section className={textStyle}>
 					{showButtonItem}
 					<h1>{title}</h1>
 					<p>{description}</p>
-					<ShowElement show={this.props.showElementForm}>
+					<ShowElement show={this.props.itemSection.identify === "Enter"}>
 						{showElemenForm}
 					</ShowElement>
 
-					{/* <ShowElement show={this.props.showElementArray}>
-
+					<ShowElement show={
+						this.props.itemSection.identify === "Enter"
+						|| this.props.itemSection.identify === "Whole"
+						|| this.props.itemSection.identify === "Portfolio"
+						|| this.props.itemSection.identify === "Granullar"
+						|| this.props.itemSection.identify === "Plan"}>
+						<ItemSectionIcons itemIcons={this.props.itemSection} />
 					</ShowElement>
-					<ShowElement show={this.props.showElementText}>
-
-					</ShowElement> */}
-					{/* <ul>
-						{this.props.itemSection.map((item, i) => {
-							return 		<li key={i}>
-								<img src={item.iconUrl} alt="" />
-								<span>{item.description}</span>
-							</li>
-						})}
-
-					</ul> */}
-					<ItemSectionIcons itemIcons={this.props.itemSection}/>
-
+					<ShowElement show={this.props.itemSection.identify === "Plan"}>
+						{showText}
+					</ShowElement>
 				</section>
-				<section className={imageStyle} >
+
+				<section className={imageStyle}>
 					<img src={img} style={{ width: "100%", display: "block" }} alt="alt" />
+					<ShowElement show={this.props.itemSection.identify === "Live"}>
+						<ItemSectionIcons itemIcons={this.props.itemSection} />
+						{showText}
+					</ShowElement>
 				</section>
 			</div>
 		);
