@@ -22,6 +22,7 @@
 
 	@include media-queries(extra-small) {
 		grid-template-columns: 1fr;
+		// grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas:
 			"Enter"
 			"EnterImage"
@@ -39,6 +40,9 @@
 
 	@include media-queries(small) {
 		grid-template-columns: 1fr 1fr;
+		// grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		// grid-row-gap: 20px;
+		// grid-column-gap: 20px;
 		grid-template-areas:
 			"Enter EnterImage"
 			"WholeImage Whole"
@@ -49,9 +53,8 @@
 			"LiveImage LiveImage";
 	}
 
-
-	&_Button{
-		background-color:#f0f2f4;
+	&_Button {
+		background-color: #f0f2f4;
 		font-size: $font-medium;
 		display: flex;
 		justify-content: center;
@@ -59,11 +62,13 @@
 		padding: 12px 14px;
 		outline: none;
 		border: none;
-			&_Text{
-				font-size: $font-medium;
-				font-weight: var(--font-weight-600);
-				margin-left: 5px;
-			}
+
+		&_Text {
+			font-size: $font-medium;
+			font-weight: var(--font-weight-600);
+			margin-left: 5px;
+			display: flex;
+
 			&::after {
 				display: block;
 				content: ' ';
@@ -73,56 +78,127 @@
 				width: 14px;
 				margin-left: 10px;
 				margin-top: 4px;
-			}	
+			}
+		}
+	}
+
+	&_Form {
+		text-align: left;
+
+		&_Container {
+			box-shadow: $box-shadow-input;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&_Input {
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				font-size: $font-medium;
+				height: 52px;
+				padding: 5px 16px;
+				width: 100%;
+				border: none;
+			}
+
+			&_Button {
+				border: none;
+				background-color: $color-two;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				font-size: $font-medium;
+				height: 52px;
+				padding: 5px 16px;
+				color: #fff;
+			}
+		}
+
+		&_Text {
+			font-size: $font-small;
+			line-height: var(--line-height-32);
+			margin: 4px 0;
+			color:$color-four;
+		}
+
+		&_Add {
+			font-size: $font-small;
+			line-height: var(--line-height-32);
+			background-color: $color-three;
+			padding: 8px 12px;
+			color:#fff;
+		}
+	}
+	&_Title{
+		font-size: $font-title;
+		line-height: var(--line-height-68);
+		font-weight: var(--font-weight-900);
+	}
+	&_Description{
+		font-size: $font-subtitle;
+		line-height: var(--line-height-36);
+		margin-bottom: $margin-bottom-description;
+		color:$color-four;
 	}
 
 
-
-
-/////////////////////////////////////////
+	/////////////////////////////////////////
 	&_Enter {
 		grid-area: Enter;
+		padding-right: $padding-right;
+
 	}
 
 	&_Enter_Image {
 		grid-area: EnterImage;
+		padding-right: $padding-left;
 	}
 
 	&_Whole {
 		grid-area: Whole;
+		padding-right: $padding-left;
 	}
 
 	&_Whole_Image {
 		grid-area: WholeImage;
 
+		padding-right: $padding-left;
+
+
 	}
 
 	&_Portfolio {
 		grid-area: Portfolio;
+		padding-right: $padding-right;
 	}
 
 	&_Portfolio_Image {
 		grid-area: PortfolioImage;
+		padding-right: $padding-left;
 
 
 	}
 
 	&_Granular {
 		grid-area: Granular;
+		padding-right: $padding-left;
 	}
 
 	&_Granular_Image {
 		grid-area: GranularImage;
+		grid-area: Portfolio;
+		padding-right: $padding-right;
 
 
 	}
 
 	&_Plan {
 		grid-area: Plan;
+		padding-right: $padding-right;
 	}
 
 	&_Plan_Image {
 		grid-area: PlanImage;
+		padding-right: $padding-left;
 
 
 	}

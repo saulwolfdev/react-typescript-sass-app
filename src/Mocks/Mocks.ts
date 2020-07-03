@@ -31,7 +31,7 @@ class Mocks {
 				img: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdb5010b9ef2d361ee0b85_Enterprise-Hero%402x.png",
 				description: "Produck allows you to build at scale, bringing your whole organization to a single place to collaborate, innovate, and move work forward.",
 				textTip: "FREE Asana & Jira Migration! Transfer everything in seconds!",
-				addText: "Free forever version with Unlimited Users. Free 14-days trial to test Premium. No credit card required. Cancel anytime."
+				addText: "Free forever version with Unlimited Users. Free 14-days trial to test Premium."
 			},
 			{
 				id: uuidv4(),

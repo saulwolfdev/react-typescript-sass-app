@@ -64,22 +64,23 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button className={styles.ItemSection_Button}>Produkt <span className={styles.ItemSection_Button_Text}> for Enterprise</span></button> : null;
 		let showText =(<span>{propTip}</span>);
 		let showElemenForm = (
-			<div>
-				<form action="">
-					<input type="text" />
-					<input type="button" value="enviar" />
+			<div className={styles.ItemSection_Form}>
+				<form className={styles.ItemSection_Form_Container}>
+					<input className={styles.ItemSection_Form_Container_Input} type="text" placeholder="Your work email..."/>
+					<input  className={styles.ItemSection_Form_Container_Button} type="button" value="Get Started Free" />
 				</form>
-
-				<small>{addText}</small>
-				<span>{textTip}</span>
+				<p  className={styles.ItemSection_Form_Text}>{addText}</p>
+				<span className={styles.ItemSection_Form_Add}>{textTip}</span>
 			</div>
 		);
 		return (
 			<div className={styles.ItemSection}>
 				<section className={textStyle}>
 					{showButtonItem}
-					<h1>{title}</h1>
-					<p>{description}</p>
+
+					<h1 className={styles.ItemSection_Title}>{title}</h1>
+					<p className={styles.ItemSection_Description}>{description}</p>
+
 					<ShowElement show={this.props.itemSection.identify === "Enter"}>
 						{showElemenForm}
 					</ShowElement>
