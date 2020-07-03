@@ -1,4 +1,4 @@
-import { IItemsTaskNames, IItemsTextSection, IItemHeader } from "../Entidades";
+import { IItemsTaskNames, IItemsTextSection, IItemHeader, IItemListsIcons, IItemsFooter, IItemsGetMore } from "../Entidades";
 import logo from "../img/svg/logo.svg";
 import { v4 as uuidv4 } from 'uuid';
 class Mocks {
@@ -11,7 +11,6 @@ class Mocks {
 
 		];
 	}
-
 	public GetItemsHeader(): IItemHeader {
 		return {
 			logoSvg: logo,
@@ -133,6 +132,89 @@ class Mocks {
 				],
 				propTip: "Pro Tip: Predict the future and avoid surprises! Use Release Reports’ predictive algorithm to have a glance at when a sprint will be completed based on the work that was already done and your team’s velocity. With this, you can communicate delays early or adapt the scope to reach your deadlines."
 			},
+		];
+	}
+
+	public GetItemsGetMore(): IItemsGetMore[] {
+		return [
+			{
+				id: uuidv4(), title: "Get more out of your existing workflow", description: "Produck integrates with 1000+ apps via Zapier and has a few built-in native integrations.", iconsCards: [
+					{
+						iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cd424fffeabaf562b72713e_e18d02bc3d9fdcf0d4bf9ad43d8a8e6d.128x128.png",
+						iconName: "Salesforce",
+						iconDescription: "Quickly visualize how each department/team’s projects and sprints are progressing"
+					},
+					{
+						iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cd4257fcd00194a6032405b_e37713ab22d82f777575279db97cd805.128x128-1.jpg",
+						iconName: "Google Sheets",
+						iconDescription: "Have an overview of projects across your entire organization with your team dashboard"
+					},
+					{
+						iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cd42403e88ff0a1bbdf7ad2_0f5a0d7ee18ced262570a8c831e1a04a.128x128.jpg",
+						iconName: "Gmail",
+						iconDescription: "Have an overview of projects across your entire organization with your team dashboard"
+					}
+				]
+			},
+		];
+	}
+	public GetListsIcons(): IItemListsIcons[] {
+		return [
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e33f0ea43b00a0b45_Security.svg",
+				title: "Security",
+				descriptionOne: "The Produck infrastructure is provided by",
+				descriptionTwo: "Amazon Web Services (AWS),",
+				descriptionTwree: " providing end-to-end security and privacy features built in.",
+			},
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e33f0eae3ee0a0b44_AdminCMS.svg",
+				title: "Data Control",
+				description: "Our Enterprise plan gives you advanced data control like full data deletion, data export, and encryption at rest.",
+			},
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e08feb95f1efa59a3_Support.svg",
+				title: "Support",
+				description: "Your dedicated success manager will help you set up and use Produck to fit your workflow and optimize team efficiency.",
+			},
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e15eeaca282efc0f7_Health.svg",
+				title: "99.9% Uptime",
+				description: "We offer the highest level of support, including 99.8% Uptime SLA, 24/7 support for urgent tasks, and 24/5 support with an eight-hour response time for less-urgent matters.",
+			},
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e46e9ce342aabce52_Management.svg",
+				title: "SAML",
+				description: "Control who has access to your organization with SAML single sign-on and Access Provisioning/Deprovisioning.",
+			},
+			{
+				id: uuidv4(),
+				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e9639c4073e741b88_Design.svg",
+				title: "Customizations",
+				description: "We understand that every team has its own needs. We use our seven years of agency experience to offer custom feature development tailored to your unique needs.",
+			},
+		];
+	}
+	public GetIItemsFooter(): IItemsFooter[] {
+		return [
+			{
+				id: uuidv4(),
+				urlFace: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5e30a0e62218ee324d68fe93_5cd5b4dc247e9d5a471b54cc_facebook-hover%201%20(1).svg",
+				urlYoutube: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc738a05fc912ba3f468541_youtube.svg",
+				urlInstagram: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc737f25fc9124cc7468392_insta.svg",
+				urlTwitter: "https://assets.website-files.com/5eab40631f030f96756bbfd5/5eac69c1f22f27f5738bd5a9_Group.svg",
+				urlTwitterText: "Follow",
+				urlBons: "https://assets.website-files.com/5bcf7ff…/5c8c1be…_logo01.png",
+				urlBonsText: "Brought to you by Bons",
+				privacyItems: [
+					{ privacy: "Privacy Policy", cookie: "Cookie Policy", terms: "Terms and Conditions", legal: "Legal Notice", contact: "Contact Us" }
+				]
+			}
 		];
 	}
 }
