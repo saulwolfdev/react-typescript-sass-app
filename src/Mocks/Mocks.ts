@@ -138,7 +138,9 @@ class Mocks {
 	public GetItemsGetMore(): IItemsGetMore[] {
 		return [
 			{
-				id: uuidv4(), title: "Get more out of your existing workflow", description: "Produck integrates with 1000+ apps via Zapier and has a few built-in native integrations.", iconsCards: [
+				id: uuidv4(), 
+				imgUrl:"https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc838999160cece240dec49_zapier.png",
+				title: "Get more out of your existing workflow", description: "Produck integrates with 1000+ apps via Zapier and has a few built-in native integrations.", iconsCards: [
 					{
 						iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cd424fffeabaf562b72713e_e18d02bc3d9fdcf0d4bf9ad43d8a8e6d.128x128.png",
 						iconName: "Salesforce",
@@ -209,10 +211,10 @@ class Mocks {
 				urlInstagram: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5cc737f25fc9124cc7468392_insta.svg",
 				urlTwitter: "https://assets.website-files.com/5eab40631f030f96756bbfd5/5eac69c1f22f27f5738bd5a9_Group.svg",
 				urlTwitterText: "Follow",
-				urlBons: "https://assets.website-files.com/5bcf7ff…/5c8c1be…_logo01.png",
+				urlBons: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5c8c1be443d1424c209d047b_logo01.png",
 				urlBonsText: "Brought to you by Bons",
 				privacyItems: [
-					{ privacy: "Privacy Policy", cookie: "Cookie Policy", terms: "Terms and Conditions", legal: "Legal Notice", contact: "Contact Us" }
+					{ privacy: "Privacy Policy", cookie: "Privacy Policy", terms: "Terms and Conditions", legal: "Legal Notice", contact: "Contact Us" }
 				]
 			}
 		];

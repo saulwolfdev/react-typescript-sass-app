@@ -9,6 +9,7 @@
 	margin-right: auto;
 	flex-wrap: wrap;
 	height: 100vh;
+
 	&_Content {
 		width: 100%;
 		display: grid;
@@ -19,6 +20,7 @@
 			"Sections"
 			"GetMore"
 			"Cards"
+			"Image"
 			"Newsletter";
 
 		@include media-queries(extra-small) {
@@ -27,29 +29,53 @@
 				"Sections"
 				"GetMore"
 				"Cards"
+				"Image"
 				"Newsletter";
 		}
 
 		@include media-queries(small) {
 			grid-template-areas:
-			"Header Header"
-			"Sections Sections"
-			"GetMore GetMore"
-			"Cards Cards"
-			"Newsletter Newsletter";
+				"Header Header"
+				"Sections Sections"
+				"GetMore GetMore"
+				"Cards Cards"
+				"Image Image"
+				"Newsletter Newsletter";
 		}
+
 		&_Header {
 			grid-area: Header;
 		}
+
 		&_Sections {
 			grid-area: Sections;
 		}
+
 		&_GetMore {
 			grid-area: GetMore;
 		}
+
 		&_Cards {
 			grid-area: Cards;
 		}
+
+		&_Image {
+			grid-area: Image;
+
+			&_Img {
+				padding: 32px 64px 48px;
+				border-radius: 8px;
+				background-position: 100% 50%, 0 0;
+				background-color: linear-gradient(90deg, #0080ff, #2693ff);
+				background-color: -webkit-gradient(linear, left top, right top, from(#0080ff), to(#2693ff));
+				background-size: 520px, auto;
+				background-repeat: no-repeat, repeat;
+				box-shadow: 3px 3px 16px 0 rgba(0, 0, 0, .08);
+				color: #fff;
+				text-align: left;
+			}
+		}
+
 		&_Newsletter {
 			grid-area: Newsletter;
 		}

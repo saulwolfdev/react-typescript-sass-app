@@ -22,8 +22,6 @@ class SectionItems extends React.Component<SectionItemsProps, SectionItemsState>
 						<ItemSection key={i} 
 						itemSection={item} 
 						showElementForm={true} 
-						// showElementArray={true}
-	                    // showElementText={true}
 						/>
 						)}
 			</div>

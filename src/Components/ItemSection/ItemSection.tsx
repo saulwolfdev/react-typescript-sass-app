@@ -62,7 +62,7 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 		const { title, description, img, addText, textTip, propTip } = this.props.itemSection;
 		const { textStyle, imageStyle } = this._getClassCss();
 		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button>product <samp>for Enterprise</samp></button> : null;
-		let showText = (this.props.itemSection.identify === "Plan") ? <span>{propTip}</span> : null;
+		let showText =(<span>{propTip}</span>);
 		let showElemenForm = (
 			<div>
 				<form action="">
@@ -83,7 +83,6 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 					<ShowElement show={this.props.itemSection.identify === "Enter"}>
 						{showElemenForm}
 					</ShowElement>
-
 					<ShowElement show={
 						this.props.itemSection.identify === "Enter"
 						|| this.props.itemSection.identify === "Whole"
@@ -100,8 +99,8 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 				<section className={imageStyle}>
 					<img src={img} style={{ width: "100%", display: "block" }} alt="alt" />
 					<ShowElement show={this.props.itemSection.identify === "Live"}>
-						<ItemSectionIcons itemIcons={this.props.itemSection} />
 						{showText}
+						<ItemSectionIcons itemIcons={this.props.itemSection} />
 					</ShowElement>
 				</section>
 			</div>

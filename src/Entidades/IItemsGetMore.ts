@@ -4,7 +4,8 @@ interface IIconCards {
 	iconDescription?:string;
 }
 export interface IItemsGetMore {
-	id:string;
+	id?:string;
+	imgUrl?:string;
 	title?:string;
 	description?:string;
     iconsCards?: Array<IIconCards>;
