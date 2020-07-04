@@ -269,7 +269,10 @@
 			}
 
 			@include media-queries(medium) {
-				display: block;
+				margin-left: -221px;
+			}
+		@include media-queries(medium) {
+				margin-left: 52px;
 			}
 		}
 
