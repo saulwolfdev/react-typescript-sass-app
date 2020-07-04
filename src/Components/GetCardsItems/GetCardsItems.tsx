@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Fragment } from "react";
-import {IItemsGetMore} from "../../Entidades"
+import {IItemsGetMore} from "../../Entidades";
+import styles from "./GetCardsItems.module.scss";
 export interface GetCardsItemsProps {
 	getCardItems:IItemsGetMore;
 }
@@ -18,12 +19,12 @@ class GetCardsItems extends React.Component<GetCardsItemsProps, GetCardsItemsSta
 		return (
 			<Fragment>
 					{this.props.getCardItems.iconsCards?.map((item, i)=>{
-						  return <div key={i}>
-							<div>
-								<img src={item.iconUrl} alt={item.iconName}/>
+						  return <div className={styles.Cards} key={i}>
+							<div className={styles.Cards_Circle}>
+								<img  className={styles.Cards_Circle_Img} src={item.iconUrl} alt={item.iconName}/>
 							</div>
-							<h3>{item.iconName}</h3>
-							<p>{item.iconDescription}</p>
+							<h3 className={styles.Cards_Title}>{item.iconName}</h3>
+							<p className={styles.Cards_Description}>{item.iconDescription}</p>
 						</div>
 					})}
 			</Fragment>

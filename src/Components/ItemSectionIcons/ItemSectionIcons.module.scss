@@ -1,0 +1,35 @@
+@import "../../scss/Index.module.scss";
+
+.ItemSectionIcons {
+	list-style: none;
+
+	&_List {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+
+		&_Img {
+			display: block;
+			margin-right: 15px;
+			margin-top: 8px;
+			width: 8%;
+
+			@include media-queries(extra-small) {
+				width: 8%;
+			}
+
+			@include media-queries(small) {
+				width: 6%;
+			}
+
+		}
+
+		&_Description {
+			margin-bottom: $margin-bottom-icon-list;
+			color: $color-four;
+			font-size: $font-paragraph;
+			line-height: var(--line-height-32);
+
+		}
+	}
+}

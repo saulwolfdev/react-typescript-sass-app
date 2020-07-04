@@ -1,6 +1,6 @@
 import * as React from "react";
 import { IItemsTextSection } from "../../Entidades";
-
+import styles from "./ItemSectionIcons.module.scss";
 export interface IconsSectionsProps {
 	itemIcons: IItemsTextSection;
 }
@@ -17,12 +17,12 @@ class IconsSections extends React.Component<IconsSectionsProps, IconsSectionsSta
 	render() {
 		const { icons } = this.props.itemIcons;
 		return (
-			<ul>
+			<ul className={styles.ItemSectionIcons}>
 				{icons?.map((item, i) => {
 					return (
-					<li key={i}>
-						<img src={item.iconUrl} alt="icon" width="24"/>
-						<p>{item.description}</p>
+					<li className={styles.ItemSectionIcons_List} key={i}>
+						<img className={styles.ItemSectionIcons_List_Img} src={item.iconUrl} alt="icon"/>
+						<p className={styles.ItemSectionIcons_List_Description}>{item.description}</p>
 					</li>)
 				})}
 			</ul>);

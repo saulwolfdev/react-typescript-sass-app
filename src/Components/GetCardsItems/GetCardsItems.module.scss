@@ -1,12 +1,42 @@
-.Cards{
-	&_Img{
-	width: 84px;
-    height: 84px;
-    padding: 24px;
-    border-radius: 100px;
-    background-color: #fff;
+@import "../../scss/Index.module.scss";
+
+.Cards {
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow: $box-shadow-content;
+	position: relative;
+	text-align: center;
+	padding: 0 40px 40px;
+	margin: 40px 10px;
+
+	&_Circle {
+		box-shadow: $box-shadow-content;
+		width: 84px;
+		height: 84px;
+		padding: 24px;
+		border-radius: 100px;
+		margin: 0 auto;
+		background-color: #fff;
+		margin-bottom: 36px;
+		position: relative;
+		top: -21px;
+
+		&_Img {
+			display: block;
+			width: 100%;
+		}
 	}
-	&_Title{}
-	&_Description{}
-	
+
+	&_Title {
+	font-size: $font-subtitle;
+    line-height: var(--line-height-32);
+	}
+
+	&_Description {
+	margin-bottom: 24px;
+    color: $color-four;
+    font-size:$font-medium;
+    line-height: var(--line-height-32);
+	}
+
 }

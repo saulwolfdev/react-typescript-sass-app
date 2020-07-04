@@ -1,0 +1,52 @@
+@import "../../scss/Index.module.scss";
+
+.GetItem{
+	text-align: center;
+	margin: 0 auto;
+		&_Title {
+		font-size: $font-title;
+		line-height: var(--line-height-68);
+		font-weight: var(--font-weight-900);
+	}
+	&_Img{
+		margin: 0 auto;
+		display: block;
+		margin-top: 80px;
+	}
+	&_Description {
+		font-size: $font-subtitle;
+		line-height: var(--line-height-36);
+		margin-bottom: $margin-bottom-description;
+		color: $color-four;
+	}
+	&_Card{
+		display: flex;
+		width: 100%;
+        justify-content: space-between;
+		flex-direction: column;
+			@include media-queries(extra-small) {
+				flex-direction: column;
+			}
+			@include media-queries(extra-small) {
+				flex-direction:row;
+			}
+	}
+	&_Button{
+		margin-top: 80px;
+			&_Content {
+		background-color:$color-one;
+		font-size: $font-medium;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px 14px;
+		outline: none;
+		border: none;
+		margin-top: 80px;
+		color:#ffff;
+		border-radius:4px ;
+			font-weight: var(--font-weight-600);
+			margin: 0 auto;
+	}
+	}
+}

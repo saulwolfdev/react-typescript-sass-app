@@ -40,6 +40,7 @@
 	@include media-queries(small) {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
+		grid-row-gap: 10px;
 		grid-template-areas:
 			"Enter          EnterImage"
 			"WholeImage     Whole"
@@ -139,6 +140,61 @@
 		line-height: var(--line-height-36);
 		margin-bottom: $margin-bottom-description;
 		color: $color-four;
+	}
+
+	&_Tip {
+		margin-top: 40px 0;
+		padding: 8px 16px 12px;
+		border-radius: 6px;
+		background-color: $color-five;
+
+		&_Text {
+			font-style: italic;
+			font-size: $font-medium;
+			color: $color-four;
+			line-height: var(--line-height-32);
+
+			&_Cap {
+				@extend .ItemSection_Tip_Text;
+				font-weight: var(--font-weight-900);
+				color: $color-four;
+			}
+		}
+
+	}
+
+	&_TipLive {
+		@extend .ItemSection_Tip;
+		max-width: 540px;
+		margin: 64px auto 80px;
+		padding: 12px;
+
+		&_Text {
+			@extend .ItemSection_Tip_Text;
+
+			&_Cap {
+				@extend .ItemSection_Tip_Text_Cap;
+			}
+		}
+	}
+
+	&_ListLive>ul {
+		width: 100%;
+		display: flex;
+		margin: 0 auto;
+		flex-direction: column;
+
+		@include media-queries(extra-small) {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		@include media-queries(small) {
+			width: 77%;
+			display: flex;
+			margin: 0 auto;
+			flex-direction: row;
+		}
 	}
 
 	&_Enter {
@@ -273,20 +329,17 @@
 	&_Portfolio {
 		@extend .ItemSection_Whole_Image;
 		grid-area: Portfolio;
-		padding-right: $padding-right;
-
 	}
 
 	&_Portfolio_Image {
-		@extend .ItemSection_Whole_Image;
+		@extend .ItemSection_Whole;
 		grid-area: PortfolioImage;
-		padding-right: $padding-left;
 	}
 
 	&_Granular {
-		@extend .ItemSection_Whole_Image;
+		@extend .ItemSection_Whole;
 		grid-area: Granular;
-		padding-right: $padding-left;
+
 	}
 
 	&_Granular_Image {
@@ -298,15 +351,12 @@
 	&_Plan {
 		@extend .ItemSection_Whole_Image;
 		grid-area: Plan;
-		padding-right: $padding-right;
+
 	}
 
 	&_Plan_Image {
-		@extend .ItemSection_Whole_Image;
+		@extend .ItemSection_Whole;
 		grid-area: PlanImage;
-		padding-right: $padding-left;
-
-
 	}
 
 	&_Live {
