@@ -18,7 +18,7 @@
 		}
 
 		&_Princing {
-			font-size: 16px;
+			font-size: $font-paragraph;
 			font-weight: 600;
 			list-style: none;
 			display: none;
@@ -37,8 +37,7 @@
 		}
 
 		&_Compare {
-			font-size: 16px;
-			// display: flex;
+			font-size: $font-paragraph;
 			align-items: center;
 			align-content: center;
 
@@ -80,24 +79,24 @@
 
 	&_Login {
 		grid-area: Login;
-		// display: flex;
 		justify-content: flex-end;
 		align-items: center;
 
 		&_In {
 			padding: 17px 20px;
-			font-size: 16px;
+			font-size: $font-paragraph;
+			color:#fff;
 		}
 
 		&_Get {
-			background-color: #2693ff;
+			background-color:$color-five;
 			padding: 17px 20px;
-			font-size: 16px;
+			font-size: $font-paragraph;
 			outline: none;
 			border: none;
 			border-radius: 4px;
-			font-weight: 700;
-			color: #fff;
+			font-weight:var(--font-weight-400);
+			color:$color-one;
 			cursor: pointer;
 		}
 

@@ -1,0 +1,132 @@
+@import "../../scss/Index.module.scss";
+
+
+
+.ListNetwork {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 15px 0;
+
+	&_Face {
+		margin: 5px 10px;
+		border-radius: 4px;
+		background-color: $color-six;
+
+		&_Link {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 9px;
+			padding-right: 9px;
+
+			&_Img {}
+		}
+	}
+
+	&_Youtube {
+		@extend .ListNetwork_Face;
+		background-color: $color-seven;
+
+		&_Link {
+			@extend .ListNetwork_Face_Link;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			padding-left: 4px;
+			padding-right: 4px;
+
+			&_Img {}
+		}
+	}
+
+	&_Instagram {
+		@extend .ListNetwork_Face;
+		background-color: $color-eight;
+
+		&_Link {
+			@extend .ListNetwork_Face_Link;
+			padding-top: 3px;
+			padding-bottom: 4px;
+			padding-left: 4px;
+			padding-right: 4px;
+
+			&_Img {}
+		}
+	}
+
+	&_Twitter {
+		@extend .ListNetwork_Face;
+		background-color: $color-nine;
+
+		&_Link {
+			@extend .ListNetwork_Face_Link;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 7px;
+			padding-right: 7px;
+			text-decoration: none;
+			color: #fff;
+			font-size: 13px;
+			font-weight: 500;
+
+			&_Img {}
+
+			&_Text {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&_Bons {
+		@extend .ListNetwork_Face;
+		background-color: $color-ten;
+
+		&_Link {
+			@extend .ListNetwork_Face_Link;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 7px;
+			padding-right: 7px;
+			text-decoration: none;
+			color: #fff;
+			font-size: $font-small;
+			font-weight: 500;
+
+			&_Img {}
+		}
+	}
+}
+
+.ListLegacy {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 15px 0;
+
+	&_Lists {
+		margin: 5px 10px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $color-six;
+		font-size: $font-small;
+	}
+
+	&_Contact {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 5px 10px;
+		color: $color-four;
+		font-size: $font-small;
+	}
+}
