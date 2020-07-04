@@ -24,11 +24,14 @@
 		width: 100%;
         justify-content: space-between;
 		flex-direction: column;
+		    flex-wrap: wrap;
 			@include media-queries(extra-small) {
 				flex-direction: column;
+				    flex-wrap: wrap;
 			}
-			@include media-queries(extra-small) {
+			@include media-queries(small) {
 				flex-direction:row;
+				    flex-wrap: nowrap;
 			}
 	}
 	&_Button{

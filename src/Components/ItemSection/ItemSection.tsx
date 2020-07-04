@@ -117,6 +117,7 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 				</section>
 
 				<ShowElement show={this.props.itemSection.identify === "Enter"}>
+					<img className={styles.ItemSection_Enter_Image_ImgEnter} src={img} alt={title}/>
 					<img className={styles.ItemSection_Enter_Image_ImgBackground} src={imgBackground} alt={title} />
 				</ShowElement>
 
@@ -129,9 +130,9 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 						|| this.props.itemSection.identify === "Plan"}>
 						<img src={img} style={{ width: "100%", display: "block" }} alt={title} />
 					</ShowElement>
-					<ShowElement show={this.props.itemSection.identify === "Enter"}>
+					{/* <ShowElement show={this.props.itemSection.identify === "Enter"}>
 						<img src={img} className={styles.ItemSection_Enter_Image_Img} alt={title} />
-					</ShowElement>
+					</ShowElement> */}
 					<ShowElement show={this.props.itemSection.identify === "Live"}>
 						{showTextLive}
 						<div className={styles.ItemSection_ListLive}>

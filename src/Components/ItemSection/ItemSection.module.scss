@@ -257,7 +257,7 @@
 			right: 0;
 			top: 56px;
 			right: 0;
-			margin-left: 52px;
+			// margin-left: 52px;
 			display: none;
 
 			@include media-queries(extra-small) {
@@ -265,15 +265,15 @@
 			}
 
 			@include media-queries(small) {
-				display: none;
+				margin-left: -221px;
 			}
 
 			@include media-queries(medium) {
-				margin-left: -221px;
+				margin-left: 100px;
 				display: block;
 			}
 		@include media-queries(large) {
-				// margin-left: 52px;
+				margin-left: 52px;
 				display: block;
 			}
 		}
@@ -286,6 +286,24 @@
 			right: 0;
 			display: none;
 
+			@include media-queries(extra-small) {
+				display: none;
+			}
+
+			@include media-queries(small) {
+				display: none;
+			}
+
+			@include media-queries(medium) {
+				display: block;
+			}
+		}
+		&_ImgEnter{
+			z-index: 100;
+			position: absolute;
+			max-width: 42%;
+			right: 0;
+			top: 146px;
 			@include media-queries(extra-small) {
 				display: none;
 			}
