@@ -3,7 +3,7 @@ import { IItemsTextSection } from "../../Entidades";
 import ShowElement from "../ShowElement/ShowElement";
 import styles from "./ItemSection.module.scss";
 import ItemSectionIcons from "../ItemSectionIcons/ItemSectionIcons";
-
+import svgArrowDown from "../../img/svg/arrowDown.svg";
 export interface ItemSectionProps {
 	itemSection: IItemsTextSection;
 	showElementForm: boolean;
@@ -61,7 +61,11 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 	public render() {
 		const { title, description, img, addText, textTip, propTip, imgBackground } = this.props.itemSection;
 		const { textStyle, imageStyle } = this._getClassCss();
-		let showButtonItem = (this.props.itemSection.identify === "Enter") ? <button className={styles.ItemSection_Button}>Produkt <span className={styles.ItemSection_Button_Text}> for Enterprise</span></button> : null;
+		let showButtonItem = (this.props.itemSection.identify === "Enter") ? 
+		<button className={styles.ItemSection_Button}>Produkt
+		<span className={styles.ItemSection_Button_Text}> for Enterprise</span>
+		<img className={styles.ItemSection_Button_Img} src={svgArrowDown} alt="icon"/>
+		</button> : null;
 		let showText = (
 			<div className={styles.ItemSection_Tip}>
 				<p className={styles.ItemSection_Tip_Text}>
