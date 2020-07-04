@@ -2,6 +2,7 @@ import * as React from "react";
 import { Fragment } from "react";
 import { IItemListsIcons } from "../../Entidades";
 import ItemListIcon from "../ItemListIcon/ItemListIcon";
+import styles from "./ItemListsIcons.module.scss";
 export interface ItemListsIconsProps {
 	itemsListIcons:Array<IItemListsIcons>
 }
@@ -18,7 +19,7 @@ class ItemListsIcons extends React.Component<ItemListsIconsProps, ItemListsIcons
 	render() { 
 		return (
 			<Fragment>
-				<ul>
+				<ul className={styles.ItemListsIcons}>
 					{this.props.itemsListIcons.map((item,i)=><ItemListIcon key={i} itemList={item}/>)}
 				</ul>
 			</Fragment>

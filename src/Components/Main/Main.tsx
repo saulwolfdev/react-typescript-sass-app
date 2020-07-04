@@ -62,7 +62,7 @@ class Main extends React.Component<MainProps, MainState> {
 			<Fragment>
 				<div className={styles.Main}>
 					<div className={styles.Main_Content}>
-						<header className={styles.Main_Content_Header}>
+						{/* <header className={styles.Main_Content_Header}>
 							<Header itemHeader={this.state.itemHeader} />
 						</header>
 						<main className={styles.Main_Content_Sections}>
@@ -76,7 +76,7 @@ class Main extends React.Component<MainProps, MainState> {
 						</section>
 						<section className={styles.Main_Content_Image}>
 							<ImageNewsletter/>
-						</section>
+						</section> */}
 						<footer className={styles.Main_Content_Newsletter}>
 							<Footer itemsFooter={this.state.itemsFooter}/>
 						</footer>

@@ -1,7 +1,6 @@
-
+@import "../../scss/Index.module.scss";
 
 .Background {
-	padding: 32px 64px 48px;
 	border-radius: 8px;
 	background-position: 100% 50%, 0 0;
 	background-color: linear-gradient(90deg, #0080ff, #2693ff);
@@ -11,4 +10,83 @@
 	box-shadow: 3px 3px 16px 0 rgba(0, 0, 0, .08);
 	color: #fff;
 	text-align: left;
+	padding: 0;
+
+	@include media-queries(extra-small) {
+		background-color: $color-six;
+		padding: 0;
+	}
+
+	@include media-queries(small) {
+		padding: 32px 64px 48px;
+	}
+
+	&_Container {
+		width: 100%;
+		height: 100%;
+		background-color: $color-six;
+		padding: 33px;
+		border-radius: 6px;
+
+		@include media-queries(extra-small) {
+			background-color: $color-six;
+			padding: 33px;
+
+		}
+
+		@include media-queries(small) {
+			background-color: transparent;
+			padding: 0;
+		}
+
+		&_Title {
+			font-size: $font-secondary;
+			color: #fff;
+			margin: 0 0 5px;
+
+			@include media-queries(extra-small) {
+				margin: 0 0 5px;
+			}
+
+			@include media-queries(small) {
+				margin: 16px 0 12px;
+			}
+		}
+
+		&_Description {
+			font-size: $font-paragraph;
+			color: #fff;
+			margin-bottom: 32px;
+		}
+
+		&_Content {
+			display: flex;
+			align-items: center;
+			align-content: center;
+
+			&_Button {
+				background-color: $color-five;
+				color: $color-one;
+				padding: 10px 12px;
+				text-align: center;
+				outline: none;
+				border: none;
+				border-radius: 4px;
+				font-size: $font-paragraph;
+				cursor: pointer;
+			}
+
+			&_Text {
+				color: #fff;
+				font-size: $font-paragraph;
+				display: flex;
+				justify-content: center;
+
+				&_Img {
+					display: block;
+					margin: 0 8px;
+				}
+			}
+		}
+	}
 }

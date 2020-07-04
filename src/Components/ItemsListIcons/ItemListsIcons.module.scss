@@ -1,0 +1,31 @@
+@import "../../scss/Index.module.scss";
+
+.ItemListsIcons {
+	background-color: $color-five;
+	padding: 30px 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+
+	@include media-queries(extra-small) {
+		grid-template-columns: 1fr;
+		padding: 30px 0;
+		grid-column-gap: 5px;
+		grid-row-gap: 5px;
+	}
+
+	@include media-queries(small) {
+		grid-template-columns: 1fr 1fr;
+		padding: 60px 0;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+
+	@include media-queries(medium) {
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 100px 0;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+}

@@ -167,9 +167,7 @@ class Mocks {
 				id: uuidv4(),
 				iconUrl: "https://assets.website-files.com/5bcf7ff0a798ce3b3ec5cb6a/5ccdc82e33f0ea43b00a0b45_Security.svg",
 				title: "Security",
-				descriptionOne: "The Produck infrastructure is provided by",
-				descriptionTwo: "Amazon Web Services (AWS),",
-				descriptionTwree: " providing end-to-end security and privacy features built in.",
+				description: "The Produck infrastructure is provided by Amazon Web Services (AWS), providing end-to-end security and privacy features built in.",
 			},
 			{
 				id: uuidv4(),

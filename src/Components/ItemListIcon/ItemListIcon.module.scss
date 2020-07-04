@@ -1,0 +1,30 @@
+@import "../../scss/Index.module.scss";
+
+.ItemListsIcons{
+	padding: 10px 0;
+	list-style: none;
+		@include media-queries(extra-small) {
+			padding: 10px 0;
+	}
+	@include media-queries(small) {
+			padding: 10px 0;
+	}
+	@include media-queries(medium) {
+		padding: 40px 0;
+	}
+	&_Img{
+		display: block;
+	}
+	&_Title{
+      font-size: $font-subtitle;
+	  line-height: var(--line-height-32);
+	  margin: 30px 0 10px;
+	  font-weight: var(--font-weight-900);
+	}
+	&_Description{
+			margin-bottom: $margin-bottom-icon-list;
+			color: $color-four;
+			font-size: $font-paragraph;
+			line-height: var(--line-height-32);
+	}
+}

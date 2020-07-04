@@ -3,7 +3,4 @@ export interface IItemListsIcons {
 	iconUrl?:string;
 	title?:string;
 	description?:string;
-	descriptionOne?:string;
-	descriptionTwo?:string;
-	descriptionTwree?:string;
 }
