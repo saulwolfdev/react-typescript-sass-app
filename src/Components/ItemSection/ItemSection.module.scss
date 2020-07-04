@@ -270,9 +270,11 @@
 
 			@include media-queries(medium) {
 				margin-left: -221px;
+				display: block;
 			}
-		@include media-queries(medium) {
+		@include media-queries(large) {
 				margin-left: 52px;
+				display: block;
 			}
 		}
 
