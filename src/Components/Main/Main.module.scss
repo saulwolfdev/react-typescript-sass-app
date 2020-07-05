@@ -2,13 +2,24 @@
 
 .Main {
 	max-width: $max-width;
-	padding-left: 1rem;
-	padding-right: 1rem;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
 	flex-wrap: wrap;
 	height: 100vh;
+padding: 8px;
+	@include media-queries(extra-small) {
+		padding: 8px;
+	}
+
+	@include media-queries(small) {
+		padding: 8px;
+	}
+
+	@include media-queries(medium) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 
 	&_Content {
 		width: 100%;
