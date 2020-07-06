@@ -4,6 +4,7 @@ import ShowElement from "../ShowElement/ShowElement";
 import styles from "./ItemSection.module.scss";
 import ItemSectionIcons from "../ItemSectionIcons/ItemSectionIcons";
 import svgArrowDown from "../../img/svg/arrowDown.svg";
+import {IItemSelectColums} from "../../Entidades/IItemSelectColums";
 export interface ItemSectionProps {
 	itemSection: IItemsTextSection;
 	showElementForm: boolean;
@@ -18,7 +19,7 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 		super(props);
 		this.state = {};
 	}
-	private _getClassCss = (): any => {
+	private _getClassCss = (): IItemSelectColums => {
 		switch (this.props.itemSection.identify) {
 			case "Enter":
 				return {
@@ -130,9 +131,6 @@ class ItemSection extends React.Component<ItemSectionProps, ItemSectionState> {
 						|| this.props.itemSection.identify === "Plan"}>
 						<img src={img} style={{ width: "100%", display: "block" }} alt={title} />
 					</ShowElement>
-					{/* <ShowElement show={this.props.itemSection.identify === "Enter"}>
-						<img src={img} className={styles.ItemSection_Enter_Image_Img} alt={title} />
-					</ShowElement> */}
 					<ShowElement show={this.props.itemSection.identify === "Live"}>
 						{showTextLive}
 						<div className={styles.ItemSection_ListLive}>
