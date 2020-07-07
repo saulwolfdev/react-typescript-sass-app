@@ -21,9 +21,9 @@ class ItemListIcon extends React.Component<ItemListIconProps, ItemListIconState>
 		return (
 		<Fragment>
 				<li className={styles.ItemListsIcons}>
-					<img className={styles.ItemListsIcons_Img} src={iconUrl} alt={title} width="64"/>
-					<h4 className={styles.ItemListsIcons_Title}>{title}</h4>
-					<p className={styles.ItemListsIcons_Description}>{description}</p>
+						<img className={styles.ItemListsIcons_Img} src={iconUrl} alt={title} width="64"/>
+						<h4 className={styles.ItemListsIcons_Title}>{title}</h4>
+						<p className={styles.ItemListsIcons_Description}>{description}</p>
 				</li>
 		</Fragment>);
 	}
